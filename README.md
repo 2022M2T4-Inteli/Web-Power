@@ -18,14 +18,7 @@
 
 ## 📝 Descrição
 
-Descrição curta sobre o que seu projeto faz:</br>
-Durante o decorrer desse módulo, foi solicitado que fosse desenvolvido um projeto em grupo, que trata-se de uma aplicação web, em que nosso cliente é a </br>
-Hurb - maior agência de viagens online sediada no Brasil. O problema se dá pelo fato de que atualmente, as antecipações de parceiros dessa agência ocorrem </br>
-de maneira manual, processo realizado pela equipe do contas a pagar. Com isso, visando melhorar esse processo, o tornando mais rápido e eficaz, criamos uma </br>
-solução que trata-se de uma aplicação web, na qual tanto o Hurb como os hotéis parceiros terão acesso totalmente digital. Sendo assim, nessa plataforma, os </br>
-hotéis parceiros poderão realizar a solicitação da antecipação de pagamento e acompanhar o status dessa solicitação, como diversos outros serviços que também </br>
-serão oferecidos. Durante o desenvolvimento desse projeto, foi levado em consideração: as regras de negócio, tendo como base os tipos de demanda </br>
-(D2, D7 e D12), como também os componentes necessários de se ter no site. </br>
+Durante o decorrer desse módulo, foi solicitado que fosse desenvolvido um projeto em grupo, que trata-se de uma aplicação web, em que nosso cliente é a Hurb - maior agência de viagens online sediada no Brasil. O problema se dá pelo fato de que atualmente, as antecipações de parceiros dessa agência ocorrem de maneira manual, processo realizado pela equipe do contas a pagar. Com isso, visando melhorar esse processo, o tornando mais rápido e eficaz, criamos uma solução que trata-se de uma aplicação web, na qual tanto o Hurb como os hotéis parceiros terão acesso totalmente digital. Sendo assim, nessa plataforma, os hotéis parceiros poderão realizar a solicitação da antecipação de pagamento e acompanhar o status dessa solicitação, como diversos outros serviços que também serão oferecidos. Durante o desenvolvimento desse projeto, foi levado em consideração: as regras de negócio, tendo como base os tipos de demanda (D2, D7 e D12), como também os componentes necessários de se ter no site.
 
 De um a dois parágrafos sobre o que é seu projeto e o que ele faz:</br>
 O projeto desse módulo trata-se de um desenvolvimento web, na qual temos o Hurb como o nosso cliente. Foi solicitado que criássemos uma aplicação web, com o </br>
