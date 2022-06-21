@@ -18,25 +18,17 @@
 
 ## 📝 Descrição
 
+Descrição curta sobre o que seu projeto faz:
+
 Durante o decorrer desse módulo, foi solicitado que fosse desenvolvido um projeto em grupo, que trata-se de uma aplicação web, em que nosso cliente é a Hurb - maior agência de viagens online sediada no Brasil. O problema se dá pelo fato de que atualmente, as antecipações de parceiros dessa agência ocorrem de maneira manual, processo realizado pela equipe do contas a pagar. Com isso, visando melhorar esse processo, o tornando mais rápido e eficaz, criamos uma solução que trata-se de uma aplicação web, na qual tanto o Hurb como os hotéis parceiros terão acesso totalmente digital. Sendo assim, nessa plataforma, os hotéis parceiros poderão realizar a solicitação da antecipação de pagamento e acompanhar o status dessa solicitação, como diversos outros serviços que também serão oferecidos. Durante o desenvolvimento desse projeto, foi levado em consideração: as regras de negócio, tendo como base os tipos de demanda (D2, D7 e D12), como também os componentes necessários de se ter no site.
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz:</br>
-O projeto desse módulo trata-se de um desenvolvimento web, na qual temos o Hurb como o nosso cliente. Foi solicitado que criássemos uma aplicação web, com o </br>
-objetivo de realizar antecipações de pagamento para os hotéis parceiros da empresa Hurb,  uma vez que esse processo de antecipação ocorria de maneira manual. </br>
-Sendo assim, com o nosso web site, é possível que os hotéis parceiros da Hurb tenham acesso a sua página correspondente a sua conta de acesso, e então, após o </br>
-login ter sido efetuado, conseguem ter acesso a plataforma para fazer a solicitação da antecipação de pagamento, escolhendo primeiramente para qual hotel quer </br>
-solicitar, qual o valor que quer antecipar (consequentemente aparece quantas reservas são equivalentes a esse valor) e por último qual o tipo de demanda o </br>
-usuário quer,  podendo escolher entre (D+2, D+7, D+15). Caso ele escolha D+2, terá um desconto de 12% do total devido ao fornecedor, se for D+7, terá um </br>
-desconto de 9% do total e se for D+15, terá um desconto de 6% do total devido ao fornecedor. Além de os hotéis parceiros conseguirem fazer o cadastro na </br>
-plataforma para receber esse serviço, conseguem editar seus dados, adicionar os seus hotéis, podem solicitar como também  acompanhar o status da solicitação </br>
-das antecipações e podem visualizar seus histórico, o qual mostra o tipo da demanda escolhido, a data, o valor solicitado e o valor total. </br>
+De um a dois parágrafos sobre o que é seu projeto e o que ele faz:
 
-Além do painel dos parceiros da Hurb, tem também o próprio painel de controle da Hurb, em que a equipe responsável pelas finanças e contas da Hurb terão acesso</br>
-e poderão ter uma visão geral de todo o processo de antecipação, sendo possível visualizar qual tipo de demanda está sendo mais escolhida. Três colunas serão </br>
-mostradas nessa tela, cada uma correspondente às demandas, apresentando qual foi a quantidade de vezes que ela foi escolhida, o valor solicitado nos últimos </br>
-meses, a média anual do valor, a data e o valor dos próximos pagamentos, além de ser apresentado um ranking, o qual mostrará em 1º lugar o hotel que realizou </br>
-a maior quantidade de solicitações. Por fim, um gráfico será apresentado para a equipe de contas a pagar, mostrando a rentabilidade anual. <br>
+O projeto desse módulo trata-se de um desenvolvimento web, na qual temos o Hurb como o nosso cliente. Foi solicitado que criássemos uma aplicação web, com o objetivo de realizar antecipações de pagamento para os hotéis parceiros da empresa Hurb, uma vez que esse processo de antecipação ocorria de maneira manual. 
 
+Sendo assim, com o nosso web site, é possível que os hotéis parceiros da Hurb tenham acesso a sua página correspondente a sua conta de acesso, e então, após o login ter sido efetuado, conseguem ter acesso a plataforma para fazer a solicitação da antecipação de pagamento, escolhendo primeiramente para qual hotel quer solicitar, qual o valor que quer antecipar (consequentemente aparece quantas reservas são equivalentes a esse valor) e por último qual o tipo de demanda o usuário quer, podendo escolher entre (D+2, D+7, D+15). Caso ele escolha D+2, terá um desconto de 12% do total devido ao fornecedor, se for D+7, terá um desconto de 9% do total e se for D+15, terá um desconto de 6% do total devido ao fornecedor. Além de os hotéis parceiros conseguirem fazer o cadastro na plataforma para receber esse serviço, conseguem editar seus dados, adicionar os seus hotéis, podem solicitar como também acompanhar o status da solicitação das antecipações e podem visualizar seus histórico, o qual mostra o tipo da demanda escolhido, a data, o valor solicitado e o valor total.
+
+Além do painel dos parceiros da Hurb, tem também o próprio painel de controle da Hurb, em que a equipe responsável pelas finanças e contas da Hurb terão acesso e poderão ter uma visão geral de todo o processo de antecipação, sendo possível visualizar qual tipo de demanda está sendo mais escolhida. Três colunas serão mostradas nessa tela, cada uma correspondente às demandas, apresentando qual foi a quantidade de vezes que ela foi escolhida, o valor solicitado nos últimos meses, a média anual do valor, a data e o valor dos próximos pagamentos, além de ser apresentado um ranking, o qual mostrará em 1º lugar o hotel que realizou a maior quantidade de solicitações. Por fim, um gráfico será apresentado para a equipe de contas a pagar, mostrando a rentabilidade anual.
 
 ## 📁 Estrutura de pastas
 
