@@ -53,6 +53,7 @@ Dentre os arquivos presentes na raiz do projeto, definem-se:
 - <b>imagens</b>: imagens relacionadas ao projeto como um todo (por exemplo imagens do sistema, do grupo, logotipos e afins).
 
 - <b>src</b>: nesta pasta encontra-se todo o código fonte do sistema (existem duas subpastas <b>backend</b> e <b>frontend</b> que contêm, respectivamente, o código do servidor e o código da página web).
+```
 
 ## 💻 Configuração para desenvolvimento
 
