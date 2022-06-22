@@ -10,17 +10,9 @@ function getBudget(totalBudget) {
     .then(response => response.json())
     .then(data => budget.textContent = 'Valor disponível para solicitação: R$ ' + data.data[hotelId].budget)
     .catch(error => console.error(error))
-  
-    const divTaxes = document.querySelector("#taxes");
-  
+
       document.querySelector("#books").hidden = true;
-      document.querySelector(".books-list").hidden = true;
-    
-    // Creating a new order only in the last modal
-    if (divTaxes.classList.contains('active')) {
-        createOrder(newOrder);
-        $("#exampleModal").modal('hide');
-    }
+      document.querySelector(".books-list").hidden = true;  
   }
 
   // Getting the budget asked from the user
@@ -49,6 +41,15 @@ function getBudget(totalBudget) {
   function D2(value) {
       var value = getValue(budget) * 0.88;
       document.querySelector("#value").textContent = `R$ ${value},00`;
+      document.querySelector("#date").innerHTML = 'Valor a receber dia 25/01/2023';
+
+      const divTaxes = document.querySelector("#taxes");
+      // Creating a new order only in the last modal
+      if (divTaxes.classList.contains('active')) {
+        createOrder(newOrder);
+        $("#exampleModal").modal('hide');
+      }
+
       return value
     }
   
