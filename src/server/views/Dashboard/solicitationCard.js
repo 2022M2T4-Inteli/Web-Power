@@ -1,6 +1,7 @@
 var hotelId;
 var hotelBudget;
 
+
 // Getting total budget from database
 function getBudget(totalBudget) {
     const url = 'http://localhost:3333/hotels'
@@ -9,16 +10,9 @@ function getBudget(totalBudget) {
     .then(response => response.json())
     .then(data => budget.textContent = 'Valor disponível para solicitação: R$ ' + data.data[hotelId].budget)
     .catch(error => console.error(error))
-  
-    D2(value);
 
-    const divTaxes = document.querySelector("#taxes");
-  
-    // Creating a new order only in the last modal
-    if (divTaxes.classList.contains('active')) {
-        createOrder(newOrder);
-        $("#exampleModal").modal('hide');
-    }
+      document.querySelector("#books").hidden = true;
+      document.querySelector(".books-list").hidden = true;  
   }
 
   // Getting the budget asked from the user
@@ -34,9 +28,10 @@ function getBudget(totalBudget) {
     // Alert if budget asked is greater than the limit
     if (budget > hotelBudget) {
       window.alert("Saldo Indisponível");
-      $("#carouselExampleControls").carousel(1);
+      $("#carouselExampleControls").carousel(0);
     }
     else {
+      getBooks();
       return budget
     }
   }
@@ -46,6 +41,15 @@ function getBudget(totalBudget) {
   function D2(value) {
       var value = getValue(budget) * 0.88;
       document.querySelector("#value").textContent = `R$ ${value},00`;
+      document.querySelector("#date").innerHTML = 'Valor a receber dia 25/01/2023';
+
+      const divTaxes = document.querySelector("#taxes");
+      // Creating a new order only in the last modal
+      if (divTaxes.classList.contains('active')) {
+        createOrder(newOrder);
+        $("#exampleModal").modal('hide');
+      }
+
       return value
     }
   
@@ -53,6 +57,7 @@ function getBudget(totalBudget) {
   function D7(value) {
       var value = getValue(budget) * 0.91;
       document.querySelector("#value").textContent = `R$ ${value},00`;
+      document.querySelector("#date").innerHTML = 'Valor a receber dia 30/01/2023';
       return value
     }
   
@@ -60,6 +65,7 @@ function getBudget(totalBudget) {
   function D15(value) {
       var value = getValue(budget) * 0.94;
       document.querySelector("#value").textContent = `R$ ${value},00`;
+      document.querySelector("#date").innerHTML = 'Valor a receber dia 14/02/2023';
       return value
     }
 
@@ -132,25 +138,12 @@ function getBudget(totalBudget) {
   
   // Creating the list of hotels to be selected
   function getHotels() {
-    const url = 'http://localhost:3333/hotels'
-  
-    var text = '';
-  
-    fetch(url)
-    .then(response => response.json())
-    .then(data => data.data.forEach(element => {
-      // Creating elements in the HTML file
-      if (element.owner_id === 1) {
-        text += `<div id="hotel ${element.id}" class="item" onclick="getHotelId(this.id)">`
-        text += '<div></div>'
-        text += '<h4 id="hotels">' + element.name + '</h4>'
-      text += '</div>'
-      document.querySelector(".list-hotels").innerHTML = text;
-
-      
-      }
-      }))
-      .catch(error => console.error(error))
+    if (hotelId == undefined) {
+      window.alert("Selecione um Hotel");
+    }
+    else {
+      document.querySelector("#solicitationValue").classList.add('active');
+    }
     }
 
 
@@ -158,8 +151,154 @@ function getBudget(totalBudget) {
 function getHotelId(id) {
   hotelId = id.split(' ')[1];
   var hotelsList = $('.item');
+  document.querySelector("#solicitation").setAttribute('data-bs-toggle', 'modal');
+  document.querySelector("#solicitation").setAttribute('data-bs-target', '#exampleModal');
   hotelsList.click(function() {
   hotelsList.css('background-color', 'rgba(127, 130, 132, 0.1)');
   $(this).css('background-color', '#3468fc');
 });
 } 
+
+function getBooks() {
+    const url = 'http://localhost:3333/books/lasts/' + hotelId
+  
+    var bookValues = [];
+  
+    fetch(url)
+    .then(response => response.json())
+    .then(data => data.forEach(element => {
+        bookValues.push(element.value)
+      }))
+      .catch(error => console.error(error))
+
+      
+      var budget = document.querySelector("#valor");
+      var textBooks = '';
+      var counter1 = 0;
+      var counter2 = 0;
+      var counter3 = 0;
+
+    if (hotelId == 1) {
+      counter1 = 1;
+      counter2 = 1;
+    }
+    else if (hotelId == 2) {
+      counter1 = 1;
+      counter2 = 1;
+      counter3 = 1;
+    }
+    else if (hotelId == 5) {
+      counter1 = 1;
+    }
+
+      budget.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          budget = document.querySelector("#valor").value
+          document.querySelector("#books").hidden = false;
+          document.querySelector(".books-list").hidden = false;
+          textBooks = ''
+          books1 = Math.floor(budget / bookValues[0]);
+          books2 = Math.floor(budget / bookValues[1]);
+          books3 = Math.floor(budget / bookValues[2]);
+
+          if (budget % bookValues[0] == 0 && counter1 == books1) {
+            document.querySelector("#books").innerHTML = 'Equivalente a ' + books1 + ' reserva(s) de R$ ' + bookValues[0] + ',00'
+
+            for (i = 0; i < books1; i++) {
+              textBooks += '<div class="item">'
+                textBooks += '<svg'
+                  textBooks += 'xmlns="http://www.w3.org/2000/svg"'
+                  textBooks += 'width="16"'
+                  textBooks += 'height="16"'
+                  textBooks += 'fill="currentColor"'
+                  textBooks += 'class="bi bi-check-circle-fill"'
+                  textBooks += 'viewBox="0 0 16 16"'
+                textBooks += '>'
+                  textBooks += '<path'
+                    textBooks += 'd="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"'
+                  textBooks += '/>'
+                textBooks += '</svg>'
+                textBooks += '<h6>Reserva 1</h6>'
+              textBooks += '</div>'
+
+              document.querySelector(".books-list").innerHTML = textBooks;
+            }
+          }
+
+          else {
+            if (budget % bookValues[1] == 0 && counter2 == books2) {
+              document.querySelector("#books").innerHTML = 'Equivalente a ' + books2 + ' reserva(s) de R$ ' + bookValues[1] + ',00'
+  
+              for (i = 0; i < books2; i++) {
+                textBooks += '<div class="item">'
+                  textBooks += '<svg'
+                    textBooks += 'xmlns="http://www.w3.org/2000/svg"'
+                    textBooks += 'width="16"'
+                    textBooks += 'height="16"'
+                    textBooks += 'fill="currentColor"'
+                    textBooks += 'class="bi bi-check-circle-fill"'
+                    textBooks += 'viewBox="0 0 16 16"'
+                  textBooks += '>'
+                    textBooks += '<path'
+                      textBooks += 'd="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"'
+                    textBooks += '/>'
+                  textBooks += '</svg>'
+                  textBooks += '<h6>Reserva 2</h6>'
+                textBooks += '</div>'
+  
+                document.querySelector(".books-list").innerHTML = textBooks;
+              }
+            }
+
+            else {
+              if (budget % bookValues[2] == 0 && counter3 == books3) {
+                document.querySelector("#books").innerHTML = 'Equivalente a ' + books3 + ' reserva(s) de R$ ' + bookValues[1] + ',00'
+    
+                for (i = 0; i < books3; i++) {
+                  textBooks += '<div class="item">'
+                    textBooks += '<svg'
+                      textBooks += 'xmlns="http://www.w3.org/2000/svg"'
+                      textBooks += 'width="16"'
+                      textBooks += 'height="16"'
+                      textBooks += 'fill="currentColor"'
+                      textBooks += 'class="bi bi-check-circle-fill"'
+                      textBooks += 'viewBox="0 0 16 16"'
+                    textBooks += '>'
+                      textBooks += '<path'
+                        textBooks += 'd="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"'
+                      textBooks += '/>'
+                    textBooks += '</svg>'
+                    textBooks += '<h6>Reserva 3</h6>'
+                  textBooks += '</div>'
+    
+                  document.querySelector(".books-list").innerHTML = textBooks;
+                }
+              }
+
+              else {
+                if (hotelId == 3 || hotelId == 4) {
+                  window.alert("Não há reservas para este hotel");
+                  document.querySelector("#books").hidden = true;
+                  document.querySelector(".books-list").hidden = true;
+                }
+                else {
+                  window.alert("Valor de reservas incompatíveis com o valor solicitado");
+                  document.querySelector("#books").hidden = true;
+                  document.querySelector(".books-list").hidden = true;
+                }
+                
+              }
+            }
+          }
+        }
+      });
+      
+}
+
+function cancel() {
+  document.querySelector("#taxes").classList.remove('active');
+  $("#exampleModal").modal('hide');
+  document.querySelector("#solicitationValue").classList.add('active');
+  document.querySelector("#valor").value = '';
+}
