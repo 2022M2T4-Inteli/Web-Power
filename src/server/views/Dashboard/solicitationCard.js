@@ -36,20 +36,20 @@ function getBudget(totalBudget) {
     }
   }
   
+  function saveOrder() {
+    const divTaxes = document.querySelector("#taxes");
+    // Creating a new order only in the last modal
+    if (divTaxes.classList.contains('active')) {
+      createOrder(newOrder);
+      $("#exampleModal").modal('hide');
+    }
+  }
   
   //Calcultates the value with 12% of taxes
   function D2(value) {
       var value = getValue(budget) * 0.88;
       document.querySelector("#value").textContent = `R$ ${value},00`;
       document.querySelector("#date").innerHTML = 'Valor a receber dia 25/01/2023';
-
-      const divTaxes = document.querySelector("#taxes");
-      // Creating a new order only in the last modal
-      if (divTaxes.classList.contains('active')) {
-        createOrder(newOrder);
-        $("#exampleModal").modal('hide');
-      }
-
       return value
     }
   
@@ -115,9 +115,9 @@ function getBudget(totalBudget) {
 
       else if (D15Checked.checked == true) {
           newOrder = {
-            request_code: requestCode,
+            request_code:'#' + requestCode,
             category: "D15",
-            requested_amount:'#' + amount,
+            requested_amount: amount,
             status: "processing",
             hotel_id: hotelId
           }
