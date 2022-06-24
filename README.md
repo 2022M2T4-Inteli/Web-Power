@@ -20,11 +20,11 @@
 
 Descrição curta sobre o que seu projeto faz:
 
-Durante o decorrer desse módulo, foi solicitado que fosse desenvolvido um projeto em grupo, que trata-se de uma aplicação web, em que nosso cliente é a Hurb - maior agência de viagens online sediada no Brasil. O problema se dá pelo fato de que atualmente, as antecipações de parceiros dessa agência ocorrem de maneira manual, processo realizado pela equipe do contas a pagar. Com isso, visando melhorar esse processo, o tornando mais rápido e eficaz, criamos uma solução que trata-se de uma aplicação web, na qual tanto o Hurb como os hotéis parceiros terão acesso totalmente digital. Sendo assim, nessa plataforma, os hotéis parceiros poderão realizar a solicitação da antecipação de pagamento e acompanhar o status dessa solicitação, como diversos outros serviços que também serão oferecidos. Durante o desenvolvimento desse projeto, foi levado em consideração: as regras de negócio, tendo como base os tipos de demanda (D2, D7 e D12), como também os componentes necessários de se ter no site.
+Durante o decorrer desse módulo, foi solicitado que fosse desenvolvido um projeto em grupo, que trata-se de uma aplicação web, em que nosso cliente é a Hurb - maior agência de viagens online sediada no Brasil. O problema se dá pelo fato de que atualmente, as antecipações de parceiros dessa agência ocorrem de maneira não muito eficaz, processo realizado pela equipe do contas a pagar. Com isso, visando melhorar esse processo, esse sistema atual, o tornando mais rápido e eficaz, criamos uma solução que trata-se de uma aplicação web, na qual tanto o Hurb como os hotéis parceiros terão acesso totalmente digital. Sendo assim, nessa plataforma, os hotéis parceiros poderão realizar a solicitação da antecipação de pagamento e acompanhar o status dessa solicitação, como diversos outros serviços que também serão oferecidos. Durante o desenvolvimento desse projeto, foi levado em consideração: as regras de negócio, tendo como base os tipos de demanda (D2, D7 e D12), como também os componentes necessários de se ter no site.
 
 De um a dois parágrafos sobre o que é seu projeto e o que ele faz:
 
-O projeto desse módulo trata-se de um desenvolvimento web, na qual temos o Hurb como o nosso cliente. Foi solicitado que criássemos uma aplicação web, com o objetivo de realizar antecipações de pagamento para os hotéis parceiros da empresa Hurb, uma vez que esse processo de antecipação ocorria de maneira manual. 
+O projeto desse módulo trata-se de um desenvolvimento web, na qual temos o Hurb como o nosso cliente. Foi solicitado que criássemos uma aplicação web, com o objetivo de realizar antecipações de pagamento para os hotéis parceiros da empresa Hurb, uma vez que esse processo de antecipação ocorria com um sistema pouco desenvolvido tecnologicamente. 
 
 Sendo assim, com o nosso web site, é possível que os hotéis parceiros da Hurb tenham acesso a sua página correspondente a sua conta de acesso, e então, após o login ter sido efetuado, conseguem ter acesso a plataforma para fazer a solicitação da antecipação de pagamento, escolhendo primeiramente para qual hotel quer solicitar, qual o valor que quer antecipar (consequentemente aparece quantas reservas são equivalentes a esse valor) e por último qual o tipo de demanda o usuário quer, podendo escolher entre (D+2, D+7, D+15). Caso ele escolha D+2, terá um desconto de 12% do total devido ao fornecedor, se for D+7, terá um desconto de 9% do total e se for D+15, terá um desconto de 6% do total devido ao fornecedor. Além de os hotéis parceiros conseguirem fazer o cadastro na plataforma para receber esse serviço, conseguem editar seus dados, adicionar os seus hotéis, podem solicitar como também acompanhar o status da solicitação das antecipações e podem visualizar seus histórico, o qual mostra o tipo da demanda escolhido, a data, o valor solicitado e o valor total.
 
@@ -33,26 +33,67 @@ Além do painel dos parceiros da Hurb, tem também o próprio painel de controle
 ## 📁 Estrutura de pastas
 
 ```
-|--> documentos<br>
-  &emsp;| --> outros <br>
-  &emsp;| T4_G3_V01_Web_application_document.pdf<br>
-  &emsp;| T4_G3_V01_Web_application_document.docx<br>
-|--> imagens<br>
-|--> src<br>
-  &emsp;|--> Backend<br>
-  &emsp;|--> Frontend<br>
-| readme.md<br>
-| license.txt
+-Raiz
+|
+|-->documentos —> contém todos os documentos do projeto, principalmente o WAD.
+ |-->antigos
+   | T4_G3_V01_Web_application_document.pdf 
+ |WAD.docx —> Trata-se de uma documentação da nossa aplicação web, em que mencionamos a visão geral do projeto, a empresa que é nossa cliente, o problema, que é o fato das antecipações estarem ocorrendo de forma manual, portanto, com a nossa plataforma web, será possível realizar as antecipações de pagamento de forma digital. Nessa documentação também citamos os objetivos gerais, descrevemos a solução, mencionamos as partes interessadas, analisamos a indústria, o produto, o cenário, entre outros. É nessa documentação que contém a nossa Matriz SWOT, nossa Proposta de Valor, Matriz de Risco, Requisitos do Sistema, nossos Personas, Histórias dos usuários (user stories), Tecnologias Utilizadas, Análise de Dados, Manual do Usuário e do Administrador, Referências, entre outros.
+|-->imagens —> Nesta pasta temos as imagens do projeto, portanto todas as capturas de tela da nossa aplicação web, desde quando se inicia o login, até o relatório final estão nessa pasta.
+|-->src —> Contém todo o código fonte do sistema. Existem duas pastas, Backend (código do servidor) e Frontend (código da página web.mj).
+ |-->Backend 
+         |--> controllers
+             | index
+         |--> database
+            | cli
+                  |--> mock.data
+                  |--> show.data
+                  |--> start
+             | database
+             | index 
+         |--> node_modules
+         |--> routes
+            | index
+        |--> services
+            | index
+        |--> views
+            | Assets
+                 |--> hurb-icon
+                 |--> hurb-logo
+                 |--> image1
+                 |--> image2
+                 |--> image3
+            | Authentication
+                 |--> index
+                 |--> script
+                 |--> styles
+            | Dashboard
+                 |--> index
+                 |--> script
+                 |--> solicitationCard
+                 |--> styles
+            | HurbControl
+                 |--> index 
+                 |--> script
+                 |--> styles
+            | Profile
+                 |--> index
+                 |--> script
+                 |--> styles
+            | global.styles
+        |--> index 
+        |--> package
+        |--> package-lock
+        |--> yarn,lock
+ |-->Frontend
+        |--> Assets
+        |--> Authentication
+        |--> Dashboard
+        |--> HurbDashboard
+        |--> Profile
+        |--> global.styles
+| README.md —> Arquivo que serve como guia e explicação geral sobre seu projeto.
 
-Dentre os arquivos presentes na raiz do projeto, definem-se:
-
-- <b>readme.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
-
-- <b>documentos</b>: aqui estarão todos os documentos do projeto. Há também uma pasta denominada <b>outros</b> onde estão presentes aqueles documentos complementares ao <b>web application document</b>.
-
-- <b>imagens</b>: imagens relacionadas ao projeto como um todo (por exemplo imagens do sistema, do grupo, logotipos e afins).
-
-- <b>src</b>: nesta pasta encontra-se todo o código fonte do sistema (existem duas subpastas <b>backend</b> e <b>frontend</b> que contêm, respectivamente, o código do servidor e o código da página web).
 ```
 
 ## 💻 Configuração para desenvolvimento
