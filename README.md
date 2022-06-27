@@ -36,9 +36,13 @@ Além do painel dos parceiros da Hurb, tem também o próprio painel de controle
 -Raiz
 |
 |-->documentos —> contém todos os documentos do projeto, principalmente o WAD.
- |-->antigos
-   | T4_G3_V01_Web_application_document.pdf 
- |WAD.docx —> Trata-se de uma documentação da nossa aplicação web, em que mencionamos a visão geral do projeto, a empresa que é nossa cliente, o problema, que é o fato das antecipações estarem ocorrendo de forma manual, portanto, com a nossa plataforma web, será possível realizar as antecipações de pagamento de forma digital. Nessa documentação também citamos os objetivos gerais, descrevemos a solução, mencionamos as partes interessadas, analisamos a indústria, o produto, o cenário, entre outros. É nessa documentação que contém a nossa Matriz SWOT, nossa Proposta de Valor, Matriz de Risco, Requisitos do Sistema, nossos Personas, Histórias dos usuários (user stories), Tecnologias Utilizadas, Análise de Dados, Manual do Usuário e do Administrador, Referências, entre outros.
+ |-->outros
+    |--> Hurb Web Power Style Guide.pdf
+    |--> Pitch Módulo 2 - Web Power (Versão Final).pdf
+    |--> Tabulação testes de funcionalidade - Registro dos testes.pdf
+    |--> Web Power - Solicitação de Antecipação.mp4
+ |--> T4_G3_V01_Web_application_document.pdf 
+ |--> T4_G3_V01_Web_application_document.docx —> Trata-se de uma documentação da nossa aplicação web, em que mencionamos a visão geral do projeto, a empresa que é nossa cliente, o problema, que é o fato das antecipações estarem ocorrendo de forma manual, portanto, com a nossa plataforma web, será possível realizar as antecipações de pagamento de forma digital. Nessa documentação também citamos os objetivos gerais, descrevemos a solução, mencionamos as partes interessadas, analisamos a indústria, o produto, o cenário, entre outros. É nessa documentação que contém a nossa Matriz SWOT, nossa Proposta de Valor, Matriz de Risco, Requisitos do Sistema, nossos Personas, Histórias dos usuários (user stories), Tecnologias Utilizadas, Análise de Dados, Manual do Usuário e do Administrador, Referências, entre outros.
 |-->imagens —> Nesta pasta temos as imagens do projeto, portanto todas as capturas de tela da nossa aplicação web, desde quando se inicia o login, até o relatório final estão nessa pasta.
 |-->src —> Contém todo o código fonte do sistema. Existem duas pastas, Backend (código do servidor) e Frontend (código da página web.mj).
  |-->Backend 
