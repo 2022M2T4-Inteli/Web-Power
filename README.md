@@ -56,42 +56,35 @@ Além do painel dos parceiros da Hurb, tem também o próprio painel de controle
             | index
         |--> services
             | index
-        |--> views
-            | Assets
-                 |--> hurb-icon
-                 |--> hurb-logo
-                 |--> image1
-                 |--> image2
-                 |--> image3
-            | Authentication
-                 |--> index
-                 |--> script
-                 |--> styles
-            | Dashboard
-                 |--> index
-                 |--> script
-                 |--> solicitationCard
-                 |--> styles
-            | HurbControl
-                 |--> index 
-                 |--> script
-                 |--> styles
-            | Profile
-                 |--> index
-                 |--> script
-                 |--> styles
-            | global.styles
         |--> index 
         |--> package
         |--> package-lock
         |--> yarn,lock
  |-->Frontend
-        |--> Assets
-        |--> Authentication
-        |--> Dashboard
-        |--> HurbDashboard
-        |--> Profile
-        |--> global.styles
+        | Assets
+             |--> hurb-icon
+                 |--> hurb-logo
+                 |--> image1
+                 |--> image2
+                 |--> image3
+         | Authentication
+                 |--> index
+                 |--> script
+                 |--> styles
+         | Dashboard
+                 |--> index
+                 |--> script
+                 |--> solicitationCard
+                 |--> styles
+         | HurbControl
+                 |--> index 
+                 |--> script
+                 |--> styles
+         | Profile
+                 |--> index
+                 |--> script
+                 |--> styles
+         |--> global.styles
 | README.md —> Arquivo que serve como guia e explicação geral sobre seu projeto.
 
 ```
